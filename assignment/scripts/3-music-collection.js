@@ -1,6 +1,7 @@
 console.log('***** Music Collection *****')
 let collection = []; // declaring collection variable
 
+// Adding addToCollection function
 const addToCollection = (title, artist, yearPublished) => {
     let album = {
         title: title,
@@ -19,4 +20,13 @@ console.log(addToCollection('Helplessness Blues', 'Fleet Foxes', '2011'));
 console.log(addToCollection('Crack Up', 'Fleet Foxes', '2017'));
 console.log(addToCollection('How I\'m Feeling Now', 'Charli XCX', '2020'));
 console.log(collection);
+
+// Adding showColleciton function
+const showCollection = array => {
+    console.log(array.length);
+    for (album of array) {
+        console.log(`${album.title} by ${album.artist}, published in ${album.year}`);
+    }
+} // end showCollection
+
 
