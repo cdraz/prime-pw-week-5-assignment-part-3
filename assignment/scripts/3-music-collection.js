@@ -21,12 +21,15 @@ console.log(addToCollection('Crack Up', 'Fleet Foxes', '2017'));
 console.log(addToCollection('How I\'m Feeling Now', 'Charli XCX', '2020'));
 console.log(collection);
 
-// Adding showColleciton function
+// Adding showCollection function
 const showCollection = array => {
     console.log(array.length);
     for (album of array) {
-        console.log(`${album.title} by ${album.artist}, published in ${album.year}`);
+        console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
     }
 } // end showCollection
+
+// Testing showCollection function
+showCollection(collection);
 
 
