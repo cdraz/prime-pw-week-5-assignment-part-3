@@ -42,3 +42,9 @@ const findByArtist = artistToFind => {
     }
     return matches;
 }
+
+// Testing findByArtist function
+console.log(findByArtist('Fleet Foxes'));
+console.log(findByArtist('King Gizzard & The Lizard Wizard'));
+console.log(findByArtist('Charli XCX'));
+
