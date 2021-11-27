@@ -9,4 +9,14 @@ const addToCollection = (title, artist, yearPublished) => {
     }
     collection.push(album);
     return album;
-}
+} // end addToCollection
+
+// testing addToCollection
+console.log(addToCollection('Punisher', 'Phoebe Bridgers', '2020'));
+console.log(addToCollection('Stranger in the Alps', 'Phoebe Bridgers', '2017'));
+console.log(addToCollection('The Money Store', 'Death Grips', '2012'));
+console.log(addToCollection('Helplessness Blues', 'Fleet Foxes', '2011'));
+console.log(addToCollection('Crack Up', 'Fleet Foxes', '2017'));
+console.log(addToCollection('How I\'m Feeling Now', 'Charli XCX', '2020'));
+console.log(collection);
+
