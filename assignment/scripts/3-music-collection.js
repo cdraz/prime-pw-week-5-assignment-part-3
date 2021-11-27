@@ -54,14 +54,22 @@ console.log(findByArtist('Charli XCX'));
 // Adding search function
 const search = searchCriteria => {
     let results = [];
+    if (searchCriteria === "" || searchCriteria === undefined) { // if blank search criteria or no criteria passed, return full collection
+        results = collection;
+        return results;
+    } 
+    else {
     for (album of collection) {
         if (searchCriteria.artist === album.artist && searchCriteria.year === album.yearPublished) { // search criteria is artist and year, both need to match to return result
             results.push(album);
         }
-    }
-    if (searchCriteria === "" || searchCriteria === undefined) { // if blank search criteria or no criteria passed, return full collection
-        results = collection;
+     }
     }
     console.log(results);
     return results;
 } // end search
+
+// testing search function
+console.log('Testing search: Phoebe Bridgers 2020 (expect Punisher match)', search({artist: 'Phoebe Bridgers', year: '2020'}));
+console.log('Testing search: Kacey Musgraves 2018 (expect empty array)', search({artist: 'Kacey Musgraves', year: '2018'}));
+console.log('Testing search: no search criteria (expecting full collection)', search());
