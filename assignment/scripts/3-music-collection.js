@@ -32,4 +32,13 @@ const showCollection = array => {
 // Testing showCollection function
 showCollection(collection);
 
-
+// Adding findByArtist function
+const findByArtist = artistToFind => {
+    let matches = [];
+    for (album of collection) {
+        if (artistToFind === album.artist) {
+            matches.push(album);
+        }
+    }
+    return matches;
+}
